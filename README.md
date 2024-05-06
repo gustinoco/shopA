@@ -1,5 +1,18 @@
 # Android Shopping 
 
+## Funcionamento e explicação 
+O Shop A seria o funcionamento do aplicativo principal servindo como SuperApp da loja A. 
+
+Caso exista o Shop B, ele teria que fazer as configurações do Shop Commons devidas, e implementando as interfaces commons no SuperApp B.
+
+Isso garante que as regras e contratos entre aplicativos serão iguais. 
+
+Para adequação de uso da mesma infraestrutura o recomendado é que cada SuperApp envie um header no Backend e ele tome a devida decisão. 
+
+Caso haja necessidade de cada App implementar features novas e diferentes, se for utilizando as interfaces de Shop-Commons ele será escalável para todas os SuperApps futuros. 
+
+
+
 ## Instalação e build
 
 Faça o clone do projeto com o seguinte comando:
