@@ -32,6 +32,7 @@ em todos os projetos abaixo
 - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Gerenciar eventos de View.
 - [Flow](https://developer.android.com/kotlin/flow) - Para chamadas assincronas em aplicações android.
 - [Retrofit](https://square.github.io/retrofit/) - SDK Para chamadas de rede.
+- [SplashScreen](https://developer.android.com/develop/ui/views/launch/splash-screen/) - Nova splash
 
 
 
