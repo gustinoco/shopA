@@ -1,0 +1,9 @@
+<resources>
+    <!-- Customize your feature theme here -->
+    <style name="Theme.AppSplashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowSplashScreenBackground">@color/colorPrimary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Theme.AppCompat.Light.NoActionBar</item>
+    </style>
+</resources>

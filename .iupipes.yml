@@ -1,0 +1,83 @@
+build:
+  java-distribution: 'zulu'
+  java-version: '11.0'
+  flavors:
+    - name: 'assemble'
+      gradle-task: 'shop-carrinho:assemble --no-daemon installArchive'
+      artifact-name: 'build-assemble'
+      artifact-path:
+        - 'br/com/itau/**/*.pom'
+        - 'br/com/itau/**/*.aar'
+      gradlew-path: '.'
+      build-path: './'
+
+publish:
+  artifactory-repo-key: 'itau-oq6-maven'
+
+
+test:
+  - name: 'Unit test'
+    gradle-task: 'testDebugUnitTest'
+    artifact-name: 'unit-test'
+    artifact-path:
+      - 'shop-carrinho/build/test-results/**/*.xml'
+    gradlew-path: '.'
+    build-path: 'br/com/itau/'
+    reporter-type: 'junit'
+    report-path: 'shop-carrinho/build/test-results/**/*.xml'
+    skip-on-error: 'false'
+
+  - name: 'Jacoco'
+    gradle-task: 'clean jacocoTestReport'
+    artifact-name: 'jacoco-test'
+    artifact-path:
+      - 'build/reports/jacoco/jacocoTestReport/html/index.html'
+    gradlew-path: '.'
+    build-path: 'br/com/itau/'
+    reporter-type: 'jacoco'
+    report-path: 'build/reports/jacoco/jacocoTestReport/html/index.html'
+
+quality:
+  linters:
+    detekt:
+      enable: 'true'
+    klint:
+      enable: 'false'
+    lint:
+      enable: 'false'
+  sonar:
+    platform: 'android'
+    binaries: '**/*.class'
+    binaries-path: 'shop-carrinho/build/intermediates/javac/release/classes'
+    sources:
+      paths: 'shop-carrinho/src/main'
+    jacoco-test:
+      artifact-name: 'jacoco-test'
+      report-xml-file: 'jacocoTestReport.xml'
+      reporter-type: 'jacoco'
+    exclusions:
+      - 'shop-carrinho/src/main/res/**/*.xml'
+      - 'shop-carrinho/src/androidTest/**/*.java'
+      - 'shop-carrinho/app/src/test/**/*.java'
+
+security:
+  fortify:
+    sigla: 'REPLACE ME'
+    sigla-app: 'REPLACE ME'
+
+custom:
+  danger:
+    enable: 'false'
+  sample-app:
+    enable: 'false'
+    name: 'app-debug.apk'
+    artifact-name: 'sample-app-module'
+    artifact-path:
+      - 'app/**/*.apk'
+      - 'br/com/itau/**/*.apk'
+    build-path: 'br/com/itau/'
+    gradle-task: ':app:assemble'
+    gradlew-path: '.'
+
+coreApp:
+  repoType: feature
