@@ -11,11 +11,11 @@ em todos os projetos abaixo
 ```
 ## Projetos commons e features
 
-[shop-commons](https://github.com/gustinoco/shop-commons)
-[shop-cart](https://github.com/gustinoco/shop-cart)
-[shop-login](https://github.com/gustinoco/shop-login)
-[shop-home](https://github.com/gustinoco/shop-home)
-[shop-shopping](https://github.com/gustinoco/shop-shopping)
+- [shop-commons](https://github.com/gustinoco/shop-commons)
+- [shop-cart](https://github.com/gustinoco/shop-cart)
+- [shop-login](https://github.com/gustinoco/shop-login)
+- [shop-home](https://github.com/gustinoco/shop-home)
+- [shop-shopping](https://github.com/gustinoco/shop-shopping)
 
 
 
