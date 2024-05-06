@@ -1,6 +1,6 @@
-# Android shoplogin Application
+# Android Shopping 
 
-## Instalação
+## Instalação e build
 
 Faça o clone do projeto com o seguinte comando:
 ```bash
@@ -9,20 +9,21 @@ git clone git@--SEU_PROJETO--.git
 Necessário rodar todos os projetos a task: publishReleasePublicationToMavenLocal
 em todos os projetos abaixo
 ```
-```bash
+## Projetos commons e features
+
 [shop-commons](https://github.com/gustinoco/shop-commons)
 [shop-cart](https://github.com/gustinoco/shop-cart)
 [shop-login](https://github.com/gustinoco/shop-login)
 [shop-home](https://github.com/gustinoco/shop-home)
 [shop-shopping](https://github.com/gustinoco/shop-shopping)
 
-```
 
-> Aplicação construida com Clean + MVVM architecture.
+
+> Aplicação construida com Clean + MVVM architecture e arquitetura multi-módulo entre features.
 
 ## SDK Utilizadas.
 - [MVVM Architecture](https://developer.android.com/topic/architecture) - Arquitetura promovendo um desenvolvimento clean.
-- [Modularização](https://developer.android.com/topic/modularization) - Sobre modularização de aplicativos escalãveis
+- [Modularização](https://developer.android.com/topic/modularization) - Sobre modularização de aplicativos escaláveis
 - [StateFlow](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow) - Gerenciamento de estado do kotlin
 - [Coroutines](https://developer.android.com/kotlin/coroutines) - Para programação assinncrona
 - [Unit Testing](https://developer.android.com/training/testing/unit-testing) - Testes unitários
